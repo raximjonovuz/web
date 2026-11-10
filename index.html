@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Test & Demo Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-cloud-bolt"></i> Server<span>Deploy</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#hero">Bosh sahifa</a>
+        <a href="#features">Xususiyatlar</a>
+        <a href="#server-status">Server holati</a>
+        <a href="#contact">Aloqa</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Mavzuni almashtirish">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="badge">
+        <span class="pulse-dot"></span> Serverga muvaffaqiyatli joylandi!
+      </div>
+      <h1>Zamonaviy Web Loyiha & Hosting Demo</h1>
+      <p>
+        Ushbu sahifa server hosting, Nginx/Apache sozlamalari yoki bulutli platformalarda
+        ishlashini sinash uchun toza HTML5, CSS3 va JavaScript asosida yaratilgan.
+      </p>
+      <div class="hero-actions">
+        <a href="#server-status" class="btn btn-primary">
+          <i class="fa-solid fa-server"></i> Server tekshiruvi
+        </a>
+        <a href="#features" class="btn btn-secondary">
+          <i class="fa-solid fa-circle-info"></i> Batafsil
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Cards -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Asosiy Xususiyatlar</h2>
+        <p>Loyiha tezkor, toza va to'liq responsiv arxitekturada qurilgan</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Yuqori Tezlik</h3>
+          <p>Hech qanday og'ir kutubxonalarsiz, sof CSS va JS yordamida maksimal darajada tez yuklanadi.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>Moslashuvchan Dizayn</h3>
+          <p>Barcha turdagi qurilmalar: smartfon, planshet va kompyuter monitorlarida mukammal ko'rinadi.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Xavfsiz & Toza Kod</h3>
+          <p>Standartlarga to'liq mos keluvchi semantik HTML tuzilishi va qulay tahrirlanadigan kod.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Server Status Section -->
+  <section class="server-status" id="server-status">
+    <div class="container">
+      <div class="status-card">
+        <div class="status-header">
+          <i class="fa-solid fa-terminal"></i>
+          <h3>Jonli Tekshiruv & Diagnostika</h3>
+        </div>
+        <div class="status-body">
+          <div class="status-item">
+            <span>Status:</span>
+            <strong class="text-success"><i class="fa-solid fa-circle-check"></i> Onlayn (200 OK)</strong>
+          </div>
+          <div class="status-item">
+            <span>Protokol & Manzil:</span>
+            <strong id="clientHost">Yuklanmoqda...</strong>
+          </div>
+          <div class="status-item">
+            <span>Serverga kirilgan vaqt:</span>
+            <strong id="clientTime">Yuklanmoqda...</strong>
+          </div>
+          <div class="status-item">
+            <span>Yuklanish tezligi:</span>
+            <strong id="loadSpeed">O'lchanmoqda...</strong>
+          </div>
+        </div>
+        <div class="counter-box">
+          <p>Tugma bosishlar soni:</p>
+          <div class="counter-display" id="clickCount">0</div>
+          <button class="btn btn-primary btn-sm" id="testBtn">
+            <i class="fa-solid fa-hand-pointer"></i> Interaktivlikni sinash
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Bog'lanish</h2>
+        <p>Savollaringiz bo'lsa xabar qoldiring</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Ismingiz</label>
+          <input type="text" id="name" placeholder="Ismingizni kiriting" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email manzilingiz</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Xabar</label>
+          <textarea id="message" rows="4" placeholder="Xabaringizni yozing..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-paper-plane"></i> Xabarni yuborish
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; <span id="currentYear"></span> ServerDeploy. Barcha huquqlar himoyalangan.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
